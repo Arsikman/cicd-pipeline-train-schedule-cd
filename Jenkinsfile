@@ -43,7 +43,7 @@ pipeline {
                 branch 'master'
             }
             steps {
-                input "Does the staging environment looks OK?'
+                input 'Does the staging environment looks OK?'
                 milestone(1)
                 withCredentials([usernamePassword(credentialsId:'webserver_login', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sshPublisher(
